@@ -3,6 +3,7 @@ public class StudentDatabaseApp {
         //Ask how many students we want to add
         Student student1 = new Student();
         student1.enroll();
+        student1.payBalance();
         // create n number of new students
     }
 }
