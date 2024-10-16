@@ -24,7 +24,6 @@ public class Student {
         this.gradeLevel = in.nextInt();
 
         setStudentID();
-        System.out.println(firstName + " " + lastName + " " + gradeLevel + " " + studentID);
     }
 
     //create unique ID
@@ -41,13 +40,12 @@ public class Student {
             Scanner in = new Scanner(System.in);
             String course = in.nextLine();
             if(!course.equalsIgnoreCase("Q")){
-                this.courses += "\n" + course;
+                this.courses += "\n  " + course;
                 tuitionBalance += costOfCourse;
             }else {
                 break;
             }
         }while(1 != 0);
-        System.out.println("ENROLLED IN: " + courses);
     }
 
     //view tuition balance
@@ -67,4 +65,11 @@ public class Student {
     }
 
     //print out student status: name, ID, courses enrolled, and balance
+    public String showInfo(){
+        return "Name: " + firstName + " " + lastName +
+                "\nGrade Level: " + gradeLevel +
+                "\n Student ID: " + studentID +
+                "\nCourses Enrolled: " + courses +
+                "\nBalance: $" + tuitionBalance;
+    }
 }
